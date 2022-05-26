@@ -1,8 +1,14 @@
+
+// Angular
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+// App
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+// Prime NG
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -10,7 +16,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

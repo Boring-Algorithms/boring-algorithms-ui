@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Challenge as Algorithm } from 'src/app/models/challenge';
-
+import { Algorithm as Algorithm } from 'src/app/models/algorithm';
+import { environment } from '../../../../environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-algorithms',
@@ -9,21 +10,16 @@ import { Challenge as Algorithm } from 'src/app/models/challenge';
 })
 export class AlgorithmsComponent implements OnInit {
 
-  challenges : Algorithm[] = [];
+  algorithms : Algorithm[] = [];
 
-  constructor() { }
+  constructor(private http : HttpClient) { }
 
   ngOnInit(): void {
-    this.challenges = [
-      <Algorithm>{
-        id: "1",
-        name: "First Challenge"
-      },
-      <Algorithm>{
-        id: "2",
-        name: "Second Challenge"
-      }
-    ];
+
+    this.http.get<Algorithm[]>(environment.GET_ALGORITHMS_URL).subscribe(data => {
+      console.log(data)
+      this.algorithms = data
+    })
   }
 
 }

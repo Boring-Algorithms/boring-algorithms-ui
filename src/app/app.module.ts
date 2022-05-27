@@ -3,6 +3,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 // App
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +15,7 @@ import {MenubarModule} from 'primeng/menubar';
 import {PanelModule} from 'primeng/panel';
 import {TabMenuModule} from 'primeng/tabmenu';
 import {TableModule} from 'primeng/table';
+import {InputTextModule} from 'primeng/inputtext';
 
 // Custom
 import { TopMenuComponent } from './src/navigation/top-menu/top-menu.component';
@@ -43,7 +45,9 @@ import { TestInputsComponent } from './src/portal/test-inputs/test-inputs.compon
     PanelModule,
     BrowserAnimationsModule,
     TabMenuModule,
-    TableModule
+    TableModule,
+    HttpClientModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]

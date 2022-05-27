@@ -15,7 +15,7 @@ export class PortalPageComponent implements OnInit {
   ngOnInit(): void {
     this.items = [
       {label: 'Dashboard', icon: 'pi pi-fw pi-chart-bar', routerLink: ['/portal/dashboard']},
-      {label: 'Challenges', icon: 'pi pi-fw pi-star', routerLink: ['/portal/challenges']},
+      {label: 'Algorithms', icon: 'pi pi-fw pi-star', routerLink: ['/portal/algorithms']},
       {label: 'Tests Executions', icon: 'pi pi-fw pi-chart-bar', routerLink: ['/portal/test-executions']},
       {label: 'Tests Inputs', icon: 'pi pi-fw pi-sign-in', routerLink: ['/portal/test-inputs']},
     ];

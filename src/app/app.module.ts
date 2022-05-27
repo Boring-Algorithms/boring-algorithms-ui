@@ -13,13 +13,14 @@ import {ButtonModule} from 'primeng/button';
 import {MenubarModule} from 'primeng/menubar';
 import {PanelModule} from 'primeng/panel';
 import {TabMenuModule} from 'primeng/tabmenu';
+import {TableModule} from 'primeng/table';
 
 // Custom
 import { TopMenuComponent } from './src/navigation/top-menu/top-menu.component';
 import { HomePageComponent } from './src/pages/home-page/home-page.component';
 import { PortalPageComponent } from './src/pages/portal-page/portal-page.component';
 import { DashboardComponent } from './src/portal/dashboard/dashboard.component';
-import { ChallengesComponent } from './src/portal/challenges/challenges.component';
+import { AlgorithmsComponent } from './src/portal/algorithms/algorithms.component';
 import { TestExecutionsComponent } from './src/portal/test-executions/test-executions.component';
 import { TestInputsComponent } from './src/portal/test-inputs/test-inputs.component';
 
@@ -30,7 +31,7 @@ import { TestInputsComponent } from './src/portal/test-inputs/test-inputs.compon
     HomePageComponent,
     PortalPageComponent,
     DashboardComponent,
-    ChallengesComponent,
+    AlgorithmsComponent,
     TestExecutionsComponent,
     TestInputsComponent
   ],
@@ -41,7 +42,8 @@ import { TestInputsComponent } from './src/portal/test-inputs/test-inputs.compon
     MenubarModule,
     PanelModule,
     BrowserAnimationsModule,
-    TabMenuModule
+    TabMenuModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

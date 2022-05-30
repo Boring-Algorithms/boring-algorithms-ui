@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { TestExecution } from 'src/app/models/test.execution';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-test-executions',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestExecutionsComponent implements OnInit {
 
-  constructor() { }
+  testExecutions : TestExecution[] = [];
+
+  constructor(private http : HttpClient) { }
 
   ngOnInit(): void {
+
+    this.http.get<TestExecution[]>(environment.GET_TEST_EXECUTIOS_URL).subscribe(data => {
+      console.log(data);
+      this.testExecutions = data;
+    })
+
+
   }
 
 }

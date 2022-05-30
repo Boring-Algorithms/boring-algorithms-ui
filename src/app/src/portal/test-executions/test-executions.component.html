@@ -1,1 +1,32 @@
-<p>test-executions works!</p>
+
+<p-table #dt [value]="testExecutions" responsiveLayout="scroll"
+[globalFilterFields]="['name','type', 'created_by']">
+
+<ng-template pTemplate="caption">
+    <div class="flex">
+        <span class="p-input-icon-left ml-auto">
+            <i class="pi pi-search"></i>
+            <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')" placeholder="Search keyword" />
+        </span>
+    </div>
+</ng-template>
+
+<ng-template pTemplate="header">
+    <tr>
+        <th>Execution Id</th>
+        <th>Algorithm Id</th>
+        <th>Amount of Tests</th>
+        <th>Invalid Test Count</th>
+        <th>Test Suite</th>
+    </tr>
+</ng-template>
+<ng-template pTemplate="body" let-test>
+    <tr>
+        <td>{{test.id}}</td>
+        <td>{{test.algorithm_id}}</td>
+        <td>{{test.amount_of_tests}}</td>
+        <td>{{test.invalid_tests_count}}</td>
+        <td>{{test.test_suite}}</td>
+    </tr>
+</ng-template>
+</p-table>
